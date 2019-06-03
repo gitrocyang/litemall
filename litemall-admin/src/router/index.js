@@ -376,6 +376,16 @@ export const asyncRouterMap = [
         }
       },
       {
+        path: 'log',
+        component: () => import('@/views/sys/log'),
+        name: 'log',
+        meta: {
+          perms: ['GET /admin/log/list'],
+          title: '操作日志',
+          noCache: true
+        }
+      },
+      {
         path: 'role',
         component: () => import('@/views/sys/role'),
         name: 'role',
@@ -390,7 +400,7 @@ export const asyncRouterMap = [
         component: () => import('@/views/sys/os'),
         name: 'os',
         meta: {
-          perms: ['GET /admin/os/list', 'POST /admin/os/create', 'POST /admin/os/update', 'POST /admin/os/delete'],
+          perms: ['GET /admin/storage/list', 'POST /admin/storage/create', 'POST /admin/storage/update', 'POST /admin/storage/delete'],
           title: '对象存储',
           noCache: true
         }
